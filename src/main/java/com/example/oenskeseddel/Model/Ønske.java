@@ -35,4 +35,5 @@ public class Ønske {
         this.linke = linke;
     }
 
+
 }
