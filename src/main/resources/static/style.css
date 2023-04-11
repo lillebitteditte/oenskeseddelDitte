@@ -1,8 +1,7 @@
 body {
-    background-color: #f5eeeb;
     font-family: Arial, sans-serif;
     text-align: center;
-    background-image: url("ønskeseddel_background.jpg");
+    background-image: url("background.png");
 }
 
 header {
@@ -11,9 +10,9 @@ header {
 }
 
 h1 {
-    margin: 0;
+    margin: 0px;
     font-size: 36px;
-    background-image: url("");
+    color: #6c440e;
 }
 
 .button-container {
