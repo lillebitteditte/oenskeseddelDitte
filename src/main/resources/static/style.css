@@ -1,23 +1,36 @@
-html {
-    color: #f5eeeb;
+body {
+    background-color: #f5eeeb;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+header {
+    background-color: #f5eeeb;
+    padding: 20px;
 }
 
 h1 {
-    color: #6c440e;
+    margin: 0;
+    font-size: 36px;
 }
 
-.btn {
-    border: #6c440e;
-    color: #f5eeeb;
-    padding: 25px 10px;
-    text-align: center;
+.button-container {
+    margin-top: 100px;
 }
 
-.btn:hover {
-    background-color: #b0aeae;
-    box-shadow: 2px 2px 2px black;
+button {
+    background-color: #ead9cd;
+    color: #6b341d;
+    font-size: 24px;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-#btn-create {
-    text-align: center;
+button:hover {
+    background-color: #d9c4b9;
 }
+
+
+
