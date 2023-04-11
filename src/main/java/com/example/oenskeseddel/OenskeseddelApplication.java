@@ -10,6 +10,4 @@ public class OenskeseddelApplication {
 		SpringApplication.run(OenskeseddelApplication.class, args);
 	}
 
-	// hello
-
 }
