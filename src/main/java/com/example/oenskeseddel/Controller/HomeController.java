@@ -10,5 +10,6 @@ public class HomeController {
     public String index() {
         return "Home/index";
     }
+    // make methods in this line.
 
 }
