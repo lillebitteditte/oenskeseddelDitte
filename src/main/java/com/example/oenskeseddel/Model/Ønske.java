@@ -34,4 +34,5 @@ public class Ønske {
     public void setLinke(String linke) {
         this.linke = linke;
     }
+
 }
