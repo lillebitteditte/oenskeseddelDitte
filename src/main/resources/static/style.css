@@ -1,0 +1,23 @@
+html {
+    color: #f5eeeb;
+}
+
+h1 {
+    color: #6c440e;
+}
+
+.btn {
+    border: #6c440e;
+    color: #f5eeeb;
+    padding: 25px 10px;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #b0aeae;
+    box-shadow: 2px 2px 2px black;
+}
+
+#btn-create {
+    text-align: center;
+}
