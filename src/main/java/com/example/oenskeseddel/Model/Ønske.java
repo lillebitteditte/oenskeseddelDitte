@@ -1,6 +1,7 @@
 package com.example.oenskeseddel.Model;
 
 public class Ønske {
+
     private String navn;
     private String beskrivelse;
     private String linke;
@@ -34,6 +35,5 @@ public class Ønske {
     public void setLinke(String linke) {
         this.linke = linke;
     }
-
 
 }
