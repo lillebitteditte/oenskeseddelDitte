@@ -35,4 +35,5 @@ public class Bruger {
     public void setEfternavn(String efternavn) {
         this.efternavn = efternavn;
     }
+
 }
