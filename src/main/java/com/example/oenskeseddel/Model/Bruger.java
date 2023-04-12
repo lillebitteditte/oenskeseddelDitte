@@ -16,24 +16,23 @@ public class Bruger {
         return bruger_id;
     }
 
-    public void setBruger_id(int bruger_id) {
-        this.bruger_id = bruger_id;
-    }
-
     public String getFornavn() {
         return fornavn;
-    }
-
-    public void setFornavn(String fornavn) {
-        this.fornavn = fornavn;
     }
 
     public String getEfternavn() {
         return efternavn;
     }
 
+    public void setBruger_id(int bruger_id) {
+        this.bruger_id = bruger_id;
+    }
+
+    public void setFornavn(String fornavn) {
+        this.fornavn = fornavn;
+    }
+
     public void setEfternavn(String efternavn) {
         this.efternavn = efternavn;
     }
-
 }
