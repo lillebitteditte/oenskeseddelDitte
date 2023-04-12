@@ -9,6 +9,7 @@ import java.util.List;
 
 @Service
 public class BrugerService {
+
     @Autowired
     BrugerRepo brugerRepo;
 
@@ -20,7 +21,7 @@ public class BrugerService {
         brugerRepo.addBruger(B);
     }
 
-    public Bruger findeBrugerID(int id) {
+    public Bruger findBrugerID(int id) {
         return brugerRepo.findeBruger(id);
     }
 

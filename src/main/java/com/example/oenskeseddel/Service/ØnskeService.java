@@ -1,6 +1,5 @@
 package com.example.oenskeseddel.Service;
 
-import com.example.oenskeseddel.Model.Bruger;
 import com.example.oenskeseddel.Model.Ønske;
 import com.example.oenskeseddel.Repository.ØnskeRepo;
 import org.springframework.beans.factory.annotation.Autowired;
