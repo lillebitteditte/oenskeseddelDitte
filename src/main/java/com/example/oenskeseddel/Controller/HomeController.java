@@ -13,6 +13,6 @@ public class HomeController {
     // make methods in this line.
     @GetMapping("/createBruger")
     public String createBruger(){
-        return "createBruger";
+        return "Home/createBruger";
     }
 }
