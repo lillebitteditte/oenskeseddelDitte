@@ -1,7 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-image: url("background.png");
+    background-color: #FFF0EA;
 }
 
 header {
@@ -10,8 +8,10 @@ header {
 }
 
 h1 {
-    margin: 0px;
-    font-size: 36px;
+    font-family: Anton, monospace;
+    margin: 10px;
+    font-size: 75px;
+    text-align: left;
     color: #6c440e;
 }
 
