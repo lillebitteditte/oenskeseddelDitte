@@ -23,3 +23,7 @@ input {
 input:hover {
     background-color: #d9c4b9;
 }
+
+button {
+    text-align: left;
+}
