@@ -4,12 +4,12 @@ public class Ønske {
 
     private String navn;
     private String beskrivelse;
-    private String linke;
+    private String link;
 
-    public Ønske(String navn, String beskrivelse, String linke) {
+    public Ønske(String navn, String beskrivelse, String link) {
         this.navn = navn;
         this.beskrivelse = beskrivelse;
-        this.linke = linke;
+        this.link = link;
     }
 
     public String getNavn() {
@@ -28,12 +28,12 @@ public class Ønske {
         this.beskrivelse = beskrivelse;
     }
 
-    public String getLinke() {
-        return linke;
+    public String getLink() {
+        return link;
     }
 
-    public void setLinke(String linke) {
-        this.linke = linke;
+    public void setLink(String link) {
+        this.link = link;
     }
 
 }
