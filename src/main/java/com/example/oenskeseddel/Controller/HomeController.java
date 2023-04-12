@@ -1,6 +1,7 @@
 package com.example.oenskeseddel.Controller;
 
 import com.example.oenskeseddel.Model.Bruger;
+import com.example.oenskeseddel.Model.Login;
 import com.example.oenskeseddel.Service.BrugerService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -29,7 +30,7 @@ public class HomeController {
     }
 
     @GetMapping("/login")
-    public String login() {
+    public String login(@ModelAttribute Login login) {
         return "Home/login";
     }
 }
