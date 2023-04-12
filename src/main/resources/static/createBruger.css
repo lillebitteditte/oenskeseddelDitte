@@ -12,25 +12,7 @@ h1 {
     font-family: Anton, monospace;
     left: 200px;
     margin: 10px;
-    font-size: 75px;
-    color: #6c440e;
-}
-
-h2{
-    position: relative;
-    font-family: Anton, monospace;
-    left: 200px;
-    margin: 0px;
-    font-size: 75px;
-    color: #6c440e;
-}
-
-h3{
-    position: relative;
-    font-family: Anton, monospace;
-    left: 200px;
-    margin: 0px;
-    font-size: 75px;
+    font-size: 40px;
     color: #6c440e;
 }
 
@@ -46,10 +28,3 @@ button {
     border-radius: 5px;
     cursor: pointer;
 }
-
-button:hover {
-    background-color: #d9c4b9;
-}
-
-
-
