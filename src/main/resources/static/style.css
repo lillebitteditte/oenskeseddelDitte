@@ -8,10 +8,29 @@ header {
 }
 
 h1 {
+    position: relative;
     font-family: Anton, monospace;
+    left: 100px;
     margin: 10px;
     font-size: 75px;
-    text-align: left;
+    color: #6c440e;
+}
+
+h2{
+    position: relative;
+    font-family: Anton, monospace;
+    left: 100px;
+    margin: 0px;
+    font-size: 75px;
+    color: #6c440e;
+}
+
+h3{
+    position: relative;
+    font-family: Anton, monospace;
+    left: 100px;
+    margin: 0px;
+    font-size: 75px;
     color: #6c440e;
 }
 
