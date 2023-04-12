@@ -8,18 +8,21 @@ header {
 }
 
 h1 {
-    position: relative;
     font-family: Anton, monospace;
-    left: 200px;
     margin: 10px;
     font-size: 40px;
     color: #6c440e;
 }
 
+form {
+    margin-top: 3rem;
+}
+
+form > input {
+    margin-bottom: 20px;
+}
+/* knap: opret bruger */
 button {
-    position: relative;
-    left: 900px;
-    bottom: 280px;
     background-color: #ead9cd;
     color: #6b341d;
     font-size: 32px;
@@ -27,4 +30,13 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+/* tekstbokse med brugerinfo  */
+input{
+    font-family: Anton, monospace;
+    font-size: 25px;
+    padding: 20px 30px;
+    border-radius: 10px;
+    background-color: #fff0ea;
 }

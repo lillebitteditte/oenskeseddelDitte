@@ -2,29 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+   <link rel="stylesheet" type="text/css" href="createBruger.css">
     <title>Title</title>
 </head>
 <body>
-<h1>Indtast oplysninger</h1>
+<div class="opretbrugerContainer">
+    <h1>Indtast oplysninger</h1>
 
-<form action="/createNewBruger" method="post">
-    <label>Fornavn</label>
-    <br>
-    <input type="text" name="fornavn" style="color: #6c440e">
-    <br>
-    <label>Efternavn</label>
-    <br>
-    <input type="text" name="efternavn" style="color: #6c440e">
-    <br>
-    <label>Brugernavn</label>
-    <br>
-    <input type="text" name="brugernavn" style="color: #6c440e">
-    <br>
-    <label>E-mail</label>
-    <br>
-    <input type="text" name="bruger_email" style="color: #6c440e">
-    <br>
-    <input type="submit" value="Opret bruger" style="color: #6c440e">
-</form>
+    <form action="/createNewBruger" method="post">
+        <label hidden="hidden" for="fornavn">Fornavn</label>
+        <input placeholder="Fornavn" type="text" name="fornavn" style="color: #6c440e" id="fornavn"/>
+        <br>
+
+        <label hidden="hidden" for="efternavn">Efternavn</label>
+        <input placeholder="Efternavn" type="text" name="efternavn" style="color: #6c440e" id="efternavn"/>
+        <br>
+
+        <label hidden="hidden" for="brugernavn">Brugernavn</label>
+        <input placeholder="Brugernavn" type="text" name="brugernavn" style="color: #6c440e" id="brugernavn"/>
+        <br>
+
+        <label hidden="hidden" for="email">E-mail</label>
+        <input placeholder="E-mail" type="text" name="bruger_email" style="color: #6c440e" id="email"/>
+        <br>
+
+        <button type="submit" style="color: #6c440e">Opret Bruger</button>
+    </form>
+</div>
+
 </body>
 </html>
