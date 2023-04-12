@@ -14,12 +14,14 @@ public class BrugerRepo {
     // This method will add a wish.
     @Autowired
     JdbcTemplate template;
-
-    public List<Bruger> fetchAll() {
-        String sql = "SELECT* FROM bruger";
-        RowMapper<Bruger> rowMapper = new BeanPropertyRowMapper<>(Bruger.class);
-        return template.query(sql, rowMapper);
+    public List<Bruger>fetchAll() {
+    String sql="SELECT* FROM bruger";
+     return null;
     }
+
+     public void tilføjeBruger() {
+
+     }
 
 
 
