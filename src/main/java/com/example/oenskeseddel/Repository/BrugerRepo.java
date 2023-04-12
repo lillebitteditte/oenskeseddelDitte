@@ -36,9 +36,9 @@ public class BrugerRepo {
     return template.update(sql,id)>0;
     }
 
-    public void updateBruger(int id, Bruger a) {
+    public void updateBruger(int id, Bruger B) {
         String sql="UPDATE bruger SET fornavn=?,efternavn=?,brugernavn=?,bruger_email=?WHERE id=?";
-        template.update(sql,a.getFornavn(),a.getEfternavn(),a.getBrugernavn(),a.getBruger_email(),a.getBruger_id());
+        template.update(sql,B.getFornavn(),B.getEfternavn(),B.getBrugernavn(),B.getBruger_email(),B.getBruger_id());
     }
 
 

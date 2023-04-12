@@ -16,4 +16,17 @@ public class BrugerService {
         return brugerRepo.fetchAll();
     }
 
+    public void addBruger(Bruger B) {
+        brugerRepo.addBruger(B);
+    }
+
+    public Bruger findeBrugerID(int id) {
+        return brugerRepo.findeBruger(id);
+    }
+
+    public void deleteBruger(int id, Bruger B) {
+        brugerRepo.updateBruger(id, B);
+    }
+
+
 }
