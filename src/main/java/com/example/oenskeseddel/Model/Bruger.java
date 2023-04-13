@@ -23,6 +23,9 @@ public class Bruger {
         this.brugernavn = brugernavn;
         this.bruger_email = bruger_email;
     }
+    public Bruger(){
+
+    }
 
     public int getBruger_id() {
         return bruger_id;
