@@ -3,20 +3,20 @@ package com.example.oenskeseddel.Controller;
 import com.example.oenskeseddel.Model.Bruger;
 import com.example.oenskeseddel.Model.Login;
 import com.example.oenskeseddel.Service.BrugerService;
-import com.example.oenskeseddel.Service.ØnskeService;
+import com.example.oenskeseddel.Service.LoginService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class HomeController {
     private BrugerService brugerService;
-    private ØnskeService ønskeService;
+
     public HomeController(BrugerService brugerService) {
         this.brugerService = brugerService;
     }
+    private LoginService loginService;
 
     @GetMapping("/")
     public String index() {
@@ -42,15 +42,18 @@ public class HomeController {
     public String login(@ModelAttribute Login login) {
         return "Home/login";
     }
+    @PostMapping("/brugerLogin")
+    public String brugerLogin(@ModelAttribute Login login) {
+      String brugernavn=login.getBrugernavn();
+      Bruger bruger=brugerService.findBrugernavn(brugernavn);
+        if (bruger != null) {
+          return "redirect:/";
 
-    @GetMapping("/deleteØnske/{id}")
-    public String deleteØnske(@PathVariable("id")int id){
-        boolean deleted = ønskeService.deleteØnske(id);
-        if(deleted){
-            return "redirect:/";
         }else{
-            return "redirect:/";
+            return "Home/loginError";
         }
     }
+
+
 }
 

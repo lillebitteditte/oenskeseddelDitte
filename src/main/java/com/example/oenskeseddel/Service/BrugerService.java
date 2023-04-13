@@ -21,8 +21,8 @@ public class BrugerService {
         brugerRepo.addBruger(B);
     }
 
-    public Bruger findBrugerID(int id) {
-        return brugerRepo.findeBruger(id);
+    public Bruger findBrugernavn(String brugernavn) {
+        return brugerRepo.findeBrugernavn(brugernavn);
     }
 
     public void deleteBruger(int id) {
