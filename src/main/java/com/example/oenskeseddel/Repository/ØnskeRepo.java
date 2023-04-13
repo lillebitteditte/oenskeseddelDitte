@@ -36,8 +36,7 @@ public class ØnskeRepo {
         return ønske;
     }
 
-    public Boolean deletØnske(int id)
-    {
+    public Boolean deleteØnske(int id){
         String sql = "DELETE FROM oenske WHERE id=?";
         return template.update(sql, id) > 0;
     }
