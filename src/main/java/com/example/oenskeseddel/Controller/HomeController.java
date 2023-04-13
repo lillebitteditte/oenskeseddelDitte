@@ -18,11 +18,14 @@ public class HomeController {
     }
 
     // make methods in this line.
-    @GetMapping("createBruger")
+    // metode til "opret bruger" knappen på forsiden
+    @GetMapping("/createBruger")
     public String createBruger() {
         return "Home/createBruger";
     }
 
+
+    // når oplysninger er indtastet
     @PostMapping("/createNewBruger")
     public String createNew(@ModelAttribute Bruger bruger) {
         brugerService.addBruger(bruger);
