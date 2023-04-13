@@ -36,7 +36,7 @@ public class BrugerRepo {
         return bruger;
     }
 
-    public boolean deleteBruger(int id) {
+    public Boolean deleteBruger(int id) {
         String sql = "DELETE FROM bruger WHERE id=?";
         return template.update(sql, id) > 0;
     }

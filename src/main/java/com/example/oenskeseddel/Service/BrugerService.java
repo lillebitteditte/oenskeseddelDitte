@@ -25,8 +25,8 @@ public class BrugerService {
         return brugerRepo.findeBruger(id);
     }
 
-    public void deleteBruger(int id, Bruger B) {
-        brugerRepo.updateBruger(id, B);
+    public void deleteBruger(int id) {
+        brugerRepo.deleteBruger(id);
     }
 
 
