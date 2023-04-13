@@ -1,7 +1,7 @@
 package com.example.oenskeseddel.Model;
 
 public class Bruger {
-    private int bruger_id;
+    private int bruger_id = 0;
     private String fornavn;
     private String efternavn;
     private String brugernavn;
