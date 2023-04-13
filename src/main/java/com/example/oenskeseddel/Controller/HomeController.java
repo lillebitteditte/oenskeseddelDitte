@@ -6,6 +6,7 @@ import com.example.oenskeseddel.Service.BrugerService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
@@ -39,6 +40,16 @@ public class HomeController {
     @GetMapping("/login")
     public String login(@ModelAttribute Login login) {
         return "Home/login";
+    }
+
+    @GetMapping("/deleteBruger/{id}")
+    public String deleteBruger(@PathVariable("id") int id){
+        boolean deleted = brugerService.deleteBruger(id);
+        if(deleted){
+            return "redirect:/";
+        } else{
+            return "redirect:/";
+        }
     }
 }
 
