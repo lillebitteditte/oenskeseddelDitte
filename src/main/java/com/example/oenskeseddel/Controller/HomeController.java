@@ -42,10 +42,18 @@ public class HomeController {
     public String login(@ModelAttribute Login login) {
         return "Home/login";
     }
-
     @PostMapping("/brugerLogin")
     public String brugerLogin(@ModelAttribute Login login) {
-    return "";
+      String brugernavn=login.getBrugernavn();
+      Bruger bruger=brugerService.findBrugernavn(brugernavn);
+        if (bruger != null) {
+          return "redirect:/";
+
+        }else{
+            return "Home/loginError";
+        }
     }
+
+
 }
 

@@ -2,3 +2,15 @@ body {
     background-color: #FFF0EA;
 }
 
+button {
+
+}
+
+
+.opretØnskeseddelContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

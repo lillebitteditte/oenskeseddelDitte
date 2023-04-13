@@ -27,9 +27,9 @@ public class ØnskeService
     {
       return ønskeRepo.findeØnske(id);
     }
-    public void deletØnske(int id,Ønske ø)
+    public Boolean deleteØnske(int id)
     {
-        ønskeRepo.updateØnske(id,ø);
+        return ønskeRepo.deleteØnske(id);
     }
 
 

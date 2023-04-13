@@ -3,8 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="createØnskeseddel.css">
 </head>
 <body>
+
+
+<a href="/create">
+    <button class="btn-create, btn" id="btn-create">Tilføj ønske</button>
+</a>
+
+<table>
+<tr th:each="ønske:${ønsker}">
+    <td th:text="${ønske.navn}">
+    <td th:text="${ønske.beskrivelse}"/>
+    <td th:text="${ønske.link}"/>
+
+    <td>
+
+        <a th:href="@{'/sletØnske/'+${ønske.id}}">
+            <button class="btn-sletØnske" id="btn-sletØnske">Slet dette ønske</button>
+        </a>
+
+        <a th:href="@{'/redigerØnske/'+${ønske.id}}">
+            <button class="btn-redigerØnske" id="btn-redigerØnske">Rediger</button>
+        </a>
+
+</table>
+
 
 </body>
 </html>
