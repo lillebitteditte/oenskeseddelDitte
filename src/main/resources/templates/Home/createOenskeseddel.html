@@ -7,26 +7,45 @@
 </head>
 <body>
 
-
+<form action="/createNewOenske" method="post">
+    <label> Hvad ønsker du dig?</label>
+    <input type="text" name="Navn">
+    <br>
+    <label>Beskrivelse(fx. farve, str, etc.)</label>
+    <input type="text"name="beskrivelse">
+    <br>
+    <label>Link(Valgfrit)</label>
+    <input type="text"name="link">
+    <br>
 <a href="/create">
     <button class="btn-create, btn" id="btn-create">Tilføj ønske</button>
 </a>
-
+    <br>
+</form>
 <table>
-<tr th:each="oenske:${oensker}">
-    <td th:text="${oenske.navn}">
-    <td th:text="${oenske.beskrivelse}"/>
-    <td th:text="${oenske.link}"/>
+    <thead>
+    <tr>
+        <th>Hvad ønsker du dig?</th>
+        <th>Beskrivelse(fx. farve, str, etc.)</th>
+        <th>Link(Valgfrit)</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="oenske:${oensker}">
+        <td th:text="${oenske.navn}">
+        <td th:text="${oenske.beskrivelse}"/>
+        <td th:text="${oenske.link}"/>
 
-    <td>
-
-        <a th:href="@{'/sletØnske/'+${ønske.id}}">
-            <button class="btn-sletØnske" id="btn-sletØnske">Slet dette ønske</button>
-        </a>
-
-        <a th:href="@{'/redigerØnske/'+${ønske.id}}">
-            <button class="btn-redigerØnske" id="btn-redigerØnske">Rediger</button>
-        </a>
+        <td>
+            <a th:href="@{'/sletØnske/'+${ønske.id}}">
+                <button class="btn-sletØnske" id="btn-sletØnske">Slet dette ønske</button>
+            </a>
+            <a th:href="@{'/redigerØnske/'+${ønske.id}}">
+                <button class="btn-redigerØnske" id="btn-redigerØnske">Rediger</button>
+            </a>
+        </td>
+    </tr>
+    </tbody>
 
 </table>
 
