@@ -10,7 +10,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class HomeController {
-    BrugerService brugerService;
+    private BrugerService brugerService;
+
+    public HomeController(BrugerService brugerService) {
+        this.brugerService = brugerService;
+    }
 
     @GetMapping("/")
     public String index() {
