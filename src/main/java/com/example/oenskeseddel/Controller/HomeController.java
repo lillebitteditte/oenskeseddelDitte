@@ -2,16 +2,20 @@ package com.example.oenskeseddel.Controller;
 
 import com.example.oenskeseddel.Model.Bruger;
 import com.example.oenskeseddel.Model.Login;
+import com.example.oenskeseddel.Model.Ønske;
 import com.example.oenskeseddel.Service.BrugerService;
 import com.example.oenskeseddel.Service.LoginService;
+import com.example.oenskeseddel.Service.ØnskeService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class HomeController {
     private BrugerService brugerService;
+    private ØnskeService ønskeService;
 
     public HomeController(BrugerService brugerService) {
         this.brugerService = brugerService;
@@ -35,6 +39,22 @@ public class HomeController {
     @PostMapping("/createNewBruger")
     public String createNew(@ModelAttribute Bruger bruger) {
         brugerService.addBruger(bruger);
+        return "redirect:/";
+    }
+
+    @GetMapping("/sletØnske/{id}")
+    public String deleteOne(@PathVariable("id") int id){
+        boolean deleted = ønskeService.deleteØnske(id);
+        if(deleted){
+            return "redirect:/";
+        } else{
+            return "redirect:/";
+        }
+    }
+
+    @PostMapping("/opdaterØnske")
+    public String opdaterØnske(@ModelAttribute Ønske ønske){
+        ønskeService.opdaterØnske(ønske.getBruger_id(),ønske);
         return "redirect:/";
     }
 
