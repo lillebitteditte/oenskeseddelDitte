@@ -3,6 +3,7 @@ package com.example.oenskeseddel.Controller;
 import com.example.oenskeseddel.Model.Bruger;
 import com.example.oenskeseddel.Model.Login;
 import com.example.oenskeseddel.Service.BrugerService;
+import com.example.oenskeseddel.Service.LoginService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -15,6 +16,7 @@ public class HomeController {
     public HomeController(BrugerService brugerService) {
         this.brugerService = brugerService;
     }
+    private LoginService loginService;
 
     @GetMapping("/")
     public String index() {
@@ -43,7 +45,7 @@ public class HomeController {
 
     @PostMapping("/brugerLogin")
     public String brugerLogin(@ModelAttribute Login login) {
-        return "";
+    return "";
     }
 }
 
