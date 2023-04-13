@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="login.css">
-    <title>Login</title>
+    <title>Title</title>
 </head>
 <body>
-<header>Login</header>
-<form action="login.html" method="post">
-<label>Brugernavn</label>
-<input type="text">
-<button type="submit">login</button>
-</form>
+<div class="loginContainer">
+    <h1>Login</h1>
+    <form action="/brugerLogin" method="post">
+        <label hidden="hidden" for="brugernavn">Brugernavn</label>
+        <input placeholder="Brugernavn" type="text" name="brugernavn" style="color: #6c440e" id="brugernavn"/>
+        <br>
+        <button type="submit" style="color: #6c440e">Login</button>
+    </form>
+</div>
 </body>
 </html>
