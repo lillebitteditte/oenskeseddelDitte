@@ -41,7 +41,9 @@ public class HomeController {
         return "Home/login";
     }
 
-    //@PostMapping("/newLogin")
-    //public String newLogin(@ModelAttribute)
+    @PostMapping("/brugerLogin")
+    public String brugerLogin(@ModelAttribute Login login) {
+        return "";
+    }
 }
 
