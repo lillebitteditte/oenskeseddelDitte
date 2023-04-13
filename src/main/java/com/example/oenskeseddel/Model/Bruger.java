@@ -7,7 +7,7 @@ public class Bruger {
     private String brugernavn;
     private String bruger_email;
 
-
+/*
     public Bruger(int bruger_id, String fornavn, String efternavn,String brugernavn,String bruger_email) {
         this.bruger_id = bruger_id;
         this.fornavn = fornavn;
@@ -15,6 +15,13 @@ public class Bruger {
         this.brugernavn=brugernavn;
         this.bruger_email=bruger_email;
 
+    }
+*/
+    public Bruger(String fornavn, String efternavn, String brugernavn, String bruger_email) {
+        this.fornavn = fornavn;
+        this.efternavn = efternavn;
+        this.brugernavn = brugernavn;
+        this.bruger_email = bruger_email;
     }
 
     public int getBruger_id() {

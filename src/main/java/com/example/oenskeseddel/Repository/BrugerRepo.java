@@ -22,8 +22,10 @@ public class BrugerRepo {
     }
 
     public void addBruger(Bruger A) {
-        String sql = "INSERT INTO bruger(bruger_id,fornavn,efternavn,brugernavn,bruger_email)VALUES(?,?,?,?,?)";
-        template.update(sql,A.getBruger_id(),A.getFornavn(),A.getEfternavn(),A.getBrugernavn(),A.getBruger_email());
+        String sql = "INSERT INTO bruger (bruger_id, fornavn, efternavn, brugernavn, bruger_email)" +
+                "VALUES(?, ?, ?, ?, ?)";
+        template.update(sql,A.getBruger_id(),A.getFornavn(),A.getEfternavn(),
+                A.getBrugernavn(),A.getBruger_email());
 
     }
 
