@@ -12,11 +12,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class HomeController {
     private BrugerService brugerService;
-
-    public HomeController(BrugerService brugerService) {
-        this.brugerService = brugerService;
-    }
     private LoginService loginService;
+    public HomeController(BrugerService brugerService, LoginService loginService) {
+        this.brugerService = brugerService;
+        this.loginService=loginService;
+    }
+
 
     @GetMapping("/")
     public String index() {
@@ -42,14 +43,18 @@ public class HomeController {
     public String login(@ModelAttribute Login login) {
         return "Home/login";
     }
+
+    @GetMapping("/loginError")
+    public String LoginError() {
+      return "Home/loginError";
+    }
     @PostMapping("/brugerLogin")
     public String brugerLogin(@ModelAttribute Login login) {
-      String brugernavn=login.getBrugernavn();
-      Bruger bruger=brugerService.findBrugernavn(brugernavn);
+        String brugernavn = login.getBrugernavn();
+        Bruger bruger = brugerService.findBrugernavn(brugernavn);
         if (bruger != null) {
-          return "redirect:/";
-
-        }else{
+            return "Home/createOenskeseddel";
+        } else {
             return "Home/loginError";
         }
     }

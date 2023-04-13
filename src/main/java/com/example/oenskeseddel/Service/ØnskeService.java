@@ -32,5 +32,9 @@ public class ØnskeService
         return ønskeRepo.deleteØnske(id);
     }
 
+    public void opdaterØnske(int id, Ønske ø){
+        ønskeRepo.opdaterØnske(id, ø);
+    }
+
 
 }
