@@ -13,12 +13,11 @@
 </a>
 
 <table>
-<tr th:each="bruger:${brugere}">
-    <td th:text="${bruger.bruger_id}">
-    <td th:text="${bruger.fornavn}"/>
-    <td th:text="${bruger.efternavn}"/>
-    <td th:text="${bruger.brugernavn}"/>
-    <td th:text="${bruger.bruger_email}"/>
+<tr th:each="ønske:${ønsker}">
+    <td th:text="${ønske.navn}">
+    <td th:text="${ønske.beskrivelse}"/>
+    <td th:text="${ønske.link}"/>
+
     <td>
 
         <a th:href="@{'/sletØnske/'+${ønske.id}}">
@@ -29,7 +28,7 @@
             <button class="btn-redigerØnske" id="btn-redigerØnske">Rediger</button>
         </a>
 
-</table>>
+</table>
 
 
 </body>
