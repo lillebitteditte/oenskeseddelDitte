@@ -29,11 +29,16 @@ public class BrugerRepo {
 
     }
 
-    public Bruger findeBrugernavn(String brugenavn) {
-        String sql = "SELECT* FROM bruger WHERE id=?";
+    public Bruger findeBrugernavn(String brugernavn) {
+        String sql = "SELECT* FROM bruger WHERE brugernavn =?";
         RowMapper<Bruger> rowMapper = new BeanPropertyRowMapper<>(Bruger.class);
-        Bruger bruger = template.queryForObject(sql, rowMapper, brugenavn);
-        return bruger;
+        List<Bruger> bruger = template.query(sql, rowMapper, brugernavn);
+       if (bruger.size()==1){
+           return bruger.get(0);
+       } else {
+           return null;
+       }
+
     }
 
     public Boolean deleteBruger(int id) {
