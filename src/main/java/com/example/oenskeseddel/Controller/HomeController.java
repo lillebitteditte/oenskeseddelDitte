@@ -32,6 +32,7 @@ public class HomeController {
     }
 
 
+
     // når oplysninger er indtastet
     @PostMapping("/createNewBruger")
     public String createNew(@ModelAttribute Bruger bruger) {
