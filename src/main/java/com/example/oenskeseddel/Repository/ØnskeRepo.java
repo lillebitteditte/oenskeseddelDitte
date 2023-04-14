@@ -20,9 +20,9 @@ public class ØnskeRepo {
         return template.query(sql, rowMapper);
     }
 
-    public void addØnske(Ønske Ø) {
-        String sql = "INSERT INTO oenske(navn,beskrivelse,link,bruger_id)VALUES (?,?,?,?)";
-        template.update(sql, Ø.getNavn(), Ø.getBeskrivelse(), Ø.getLink(), Ø.getBruger_id());
+    public void addØnske(Ønske ø) {
+        String sql = "INSERT INTO oenske(navn, beskrivelse,link, bruger_id)VALUES (?,?,?,?)";
+        template.update(sql, ø.getNavn(), ø.getBeskrivelse(), ø.getLink(), ø.getBruger_id());
 
     }
 
