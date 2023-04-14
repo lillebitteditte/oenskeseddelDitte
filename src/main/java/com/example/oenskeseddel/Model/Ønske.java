@@ -14,10 +14,6 @@ public class Ønske {
         this.bruger_id = bruger_id;
     }
 
-    public Ønske(String navn, String beskrivelse, String link) {
-
-    }
-
     public String getNavn() {
         return navn;
     }
