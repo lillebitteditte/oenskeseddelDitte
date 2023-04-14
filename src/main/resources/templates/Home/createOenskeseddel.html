@@ -9,15 +9,20 @@
 <body>
 
 <form action="/createNewOenske" method="post">
-    <label> Hvad ønsker du dig?</label>
-    <input type="text" name="Navn">
+    <label>
+        <input placeholder="Hvad ønsker du dig?" type="text" name="ønskenavn" style="color: #6c440e">
+    </label>
+
+    <label>
+        <input placeholder="Beskrivelse (farve, str, etc)" type="text" name="beskrivelse" style="color: #6c440e">
+    </label>
     <br>
-    <label>Beskrivelse(fx. farve, str, etc.)</label>
-    <input type="text" name="beskrivelse">
+    <label>
+        <input placeholder="Link (valgfrit)" type="text" name="link" style="color: #6c440e">
+    </label>
+
     <br>
-    <label>Link(Valgfrit)</label>
-    <input type="text" name="link">
-    <br>
+
     <a href="/createOenskeseddel">
         <button class="btn-create, btn" id="btn-create">Tilføj ønske</button>
     </a>
@@ -26,10 +31,9 @@
 <table>
     <thead>
     <tr>
-        <th>Titel på ønskeseddel</th>
-        <th>Hvad ønsker du dig?</th>
-        <th>Beskrivelse(fx. farve, str, etc.)</th>
-        <th>Link(Valgfrit)</th>
+        <th>Ønske</th>
+        <th>Beskrivelse</th>
+        <th>Link</th>
     </tr>
     </thead>
     <tbody>
