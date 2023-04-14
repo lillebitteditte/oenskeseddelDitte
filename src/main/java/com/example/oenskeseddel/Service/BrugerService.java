@@ -24,10 +24,18 @@ public class BrugerService {
     public Bruger findBrugernavn(String brugernavn) {
         return brugerRepo.findeBrugernavn(brugernavn);
     }
+/*
+    public Bruger findBrugerById(int id){
+        return brugerRepo.findbrugerById(id);
+    }
 
+
+ */
     public void deleteBruger(int id) {
         brugerRepo.deleteBruger(id);
     }
+
+
 
 
 }

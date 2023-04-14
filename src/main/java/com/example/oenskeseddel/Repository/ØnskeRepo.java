@@ -20,6 +20,12 @@ public class ØnskeRepo {
         return template.query(sql, rowMapper);
     }
 
+    public List<Ønske> fetchUserWishes(int id) {
+       String sql = "SELECT * FROM oenske WHERE bruger_id = ?";
+       RowMapper<Ønske> rowMapper = new BeanPropertyRowMapper<>(Ønske.class);
+       return template.query(sql, rowMapper, id);
+    }
+
     public void addØnske(Ønske ø) {
         String sql = "INSERT INTO oenske(navn, beskrivelse,link, bruger_id)VALUES (?,?,?,?)";
         template.update(sql, ø.getNavn(), ø.getBeskrivelse(), ø.getLink(), ø.getBruger_id());

@@ -10,9 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -48,14 +46,23 @@ public class HomeController {
     @GetMapping("/createOenskeseddel")
     public String index(Model model) {
         List<Ønske> ønskeList = ønskeService.fetchAll();
-        model.addAttribute("oensker", ønskeList);
-        return "createOenskeseddel";
+        model.addAttribute("oenske", ønskeList);
+        return "Home/createOenskeseddel";
+    }
+
+
+    //PathVariable refererer til den værdi som vi angiver oppe i mappingen. Efterfølgende kan vi så bruge variablen.
+    @GetMapping("/createOenskeseddel/{bruger_id}")
+    public String indexForUser(Model model, @PathVariable int bruger_id) {
+        List<Ønske> ønskeList = ønskeService.fetchUserWishes(bruger_id);
+        model.addAttribute("oenske", ønskeList);
+        return "Home/createOenskeseddel";
     }
 
     @PostMapping("/createNewOenske")
     public String createNewØnske(@ModelAttribute Ønske ønske) {
         ønskeService.addØnske(ønske);
-        return "createOenskeseddel";
+        return "Home/createOenskeseddel";
     }
 
     // når oplysninger er indtastet
@@ -76,12 +83,14 @@ public class HomeController {
         return "Home/loginError";
     }
 
+    //Vi redirecter i bunden af metoden, da det sørger for at vi bliver sendt over på den rigtige html side
+    //i stedet for at forblive på samme side.
     @PostMapping("/brugerLogin")
     public String brugerLogin(@ModelAttribute Login login) {
         String brugernavn = login.getBrugernavn();
         Bruger bruger = brugerService.findBrugernavn(brugernavn);
         if (bruger != null) {
-            return "Home/createOenskeseddel";
+            return "redirect:/createOenskeseddel/" + bruger.getBruger_id();
         } else {
             return "Home/loginError";
         }

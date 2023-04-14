@@ -32,19 +32,20 @@
     </tr>
     </thead>
     <tbody>
-    <tr th:each="oenske:${oensker}">
-        <td th:text="${oenske.navn}"></td>
-        <td th:text="${oenske.beskrivelse}"></td>
-        <td th:text="${oenske.link}"></td>
+    <tr th:each="wish:${oenske}">
+        <td th:text="${wish.getNavn()}"></td>
+        <td th:text="${wish.getBeskrivelse()}"></td>
+        <td th:text="${wish.getLink()}"></td>
+        <td th:text="${wish.getBruger_id()}"></td>
 
-        <td>
-            <a th:href="@{'/sletØnske/'+${ønske.id}}">
+
+            <a th:href="@{'/sletØnske/'+${wish.}}">
                 <button class="btn-sletØnske" id="btn-sletØnske">Slet dette ønske</button>
             </a>
-            <a th:href="@{'/redigerØnske/'+${ønske.id}}">
+            <a th:href="@{'/redigerØnske/'+${wish.id}}">
                 <button class="btn-redigerØnske" id="btn-redigerØnske">Rediger</button>
             </a>
-        </td>
+
     </tr>
     </tbody>
 

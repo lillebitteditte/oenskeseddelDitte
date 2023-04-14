@@ -8,6 +8,7 @@ public class OenskeseddelApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(OenskeseddelApplication.class, args);
+
 	}
 
 }

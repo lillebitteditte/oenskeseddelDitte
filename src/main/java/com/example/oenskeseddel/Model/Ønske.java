@@ -7,6 +7,10 @@ public class Ønske {
     private String link;
     private int bruger_id;
 
+    public Ønske() {
+
+    }
+
     public Ønske(String navn, String beskrivelse, String link, int bruger_id) {
         this.navn = navn;
         this.beskrivelse = beskrivelse;
