@@ -37,14 +37,15 @@ h3 {
 button {
     position: relative;
     left: 900px;
-    bottom: 280px;
+    bottom: 400px;
     background-color: #ead9cd;
     color: #6b341d;
     font-size: 32px;
     padding: 40px 60px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    border-radius: 50px;
+    border-width: 0px 2px 1px 0px;
+    border-style: dashed;
+    border-color: rgba(255, 0, 184, 0.8);
 }
 
 button:hover {

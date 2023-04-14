@@ -1,4 +1,7 @@
-/* Rectangle 1 */
+body {
+    background-color: #FFF0EA;
+}
+
 
 rektangel1 {
     box-sizing: border-box;
@@ -12,8 +15,6 @@ rektangel1 {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-/* Rectangle 2 */
-
 rektangel2 {
     box-sizing: border-box;
 
@@ -26,7 +27,6 @@ rektangel2 {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-/* Rectangle 3 */
 
 rektangel3 {
     box-sizing: border-box;
