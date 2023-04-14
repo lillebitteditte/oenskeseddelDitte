@@ -13,12 +13,12 @@
 </a>
 
 <table>
-<tr th:each="ønske:${ønsker}">
-    <td th:text="${ønske.navn}">
-    <td th:text="${ønske.beskrivelse}"/>
-    <td th:text="${ønske.link}"/>
+<td th:each="oenske:${oensker}">
+    <td th:text="${oenske.navn}"></td>
+    <td th:text="${oenske.beskrivelse}"></td>
+    <td th:text="${oenske.link}"></td>
 
-    <td>
+
 
         <a th:href="@{'/sletØnske/'+${ønske.id}}">
             <button class="btn-sletØnske" id="btn-sletØnske">Slet dette ønske</button>
