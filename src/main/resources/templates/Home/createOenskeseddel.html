@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="createØnskeseddel.css">
-    <title>Title</title>
-
+    <link rel="stylesheet" type="text/css" th:href="@{/css/createØnskeseddel.css}">
 </head>
 <body>
 
 <form action="/createNewOenske" method="post">
-    <label>
-        <input placeholder="Hvad ønsker du dig?" type="text" name="ønskenavn" style="color: #6c440e">
-    </label>
+    <div id="rektangel1">
+        <label>
+            <input placeholder="Hvad ønsker du dig?" type="text" name="ønskenavn" style="color: #6c440e">
+        </label>
+    </div>
 
-    <label>
-        <input placeholder="Beskrivelse (farve, str, etc)" type="text" name="beskrivelse" style="color: #6c440e">
-    </label>
+    <div id="rektangel2">
+        <label>
+            <input placeholder="Beskrivelse (farve, str, etc)" type="text" name="beskrivelse" style="color: #6c440e">
+        </label>
+    </div>
+
     <br>
-    <label>
-        <input placeholder="Link (valgfrit)" type="text" name="link" style="color: #6c440e">
-    </label>
+    <div id="rektangel3">
+        <label>
+            <input placeholder="Link (valgfrit)" type="text" name="link" style="color: #6c440e">
+        </label>
+    </div>
 
     <br>
 
@@ -44,7 +48,6 @@
         <td th:text="${wish.getBruger_id()}"></td>
 
     </tr>
-
 
 
     </tbody>
