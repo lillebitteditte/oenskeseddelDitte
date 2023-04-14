@@ -95,5 +95,10 @@ public class HomeController {
             return "Home/loginError";
         }
     }
+
+    @GetMapping("/")
+    public String addØnske() {
+        return "";
+    }
 }
 
