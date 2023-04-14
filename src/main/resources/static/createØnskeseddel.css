@@ -1,6 +1,6 @@
 /* Rectangle 1 */
 
-rektangel1{
+rektangel1 {
     box-sizing: border-box;
 
     position: absolute;
@@ -14,7 +14,7 @@ rektangel1{
 
 /* Rectangle 2 */
 
-rektangel2{
+rektangel2 {
     box-sizing: border-box;
 
     position: absolute;
@@ -28,7 +28,7 @@ rektangel2{
 
 /* Rectangle 3 */
 
-rektangel3{
+rektangel3 {
     box-sizing: border-box;
 
     position: absolute;
@@ -43,7 +43,7 @@ rektangel3{
 
 /* Hvad ønsker du dig? */
 
-ønskeNavn{
+ønskeNavn {
     position: absolute;
     width: 143px;
     height: 18px;
@@ -59,7 +59,7 @@ rektangel3{
 
 /* Beskrivelse (fx farve, str, etc) */
 
-ønskeBeskrivelse{
+ønskeBeskrivelse {
     position: absolute;
     width: 199px;
     height: 18px;
@@ -75,7 +75,7 @@ rektangel3{
 
 /* Link (valgfrit) */
 
-ønskeLink{
+ønskeLink {
     position: absolute;
     width: 94px;
     height: 18px;

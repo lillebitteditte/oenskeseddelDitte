@@ -32,7 +32,8 @@ form {
 form > input {
     margin-bottom: 20px;
 }
-/* knap: opret bruger */
+
+/* knap: login */
 button {
     background-color: #ead9cd;
     color: #6b341d;
@@ -45,7 +46,7 @@ button {
 
 /* tekstbokse med brugerinfo  */
 
-input{
+input {
     font-family: Anton, monospace;
     font-size: 25px;
     padding: 20px 30px;

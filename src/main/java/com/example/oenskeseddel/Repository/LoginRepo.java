@@ -21,8 +21,8 @@ public class LoginRepo {
 
     public boolean checkLogin(String brugernavn) {
         String sql = "SELECT* FROM bruger WHERE brugernavn=?";
-        Object[]params={brugernavn};
-        int count=jdbcTemplate.queryForObject(sql,params,Integer.class);
-        return count>0;
+        Object[] params = {brugernavn};
+        int count = jdbcTemplate.queryForObject(sql, params, Integer.class);
+        return count > 0;
     }
 }
