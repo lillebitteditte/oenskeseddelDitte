@@ -2,6 +2,7 @@ package com.example.oenskeseddel.Model;
 
 public class Ønske {
 
+    private int id;
     private String navn;
     private String beskrivelse;
     private String link;
@@ -33,7 +34,13 @@ public class Ønske {
     public int getBruger_id() {
         return bruger_id;
     }
+    public int getId() {
+        return id;
+    }
 
+    public void setId(int id) {
+        this.id = id;
+    }
     public void setBeskrivelse(String beskrivelse) {
         this.beskrivelse = beskrivelse;
     }

@@ -41,15 +41,15 @@ public class ØnskeRepo {
         return ønske;
     }
 
-    public Boolean deleteØnske(int id) {
+    public Boolean sletOenske(int id) {
         String sql = "DELETE FROM oenske WHERE id=?";
         return template.update(sql, id) > 0;
     }
 
     // This method will update the ønske.
-    public void opdaterØnske(int id, Ønske ø) {
-        String sql = "UPDATE oenske SET navn=?,beskrivelse=?,link=?,bruger_id=?WHERE id=?";
-        template.update(sql, ø.getNavn(), ø.getBeskrivelse(), ø.getLink(), ø.getBruger_id());
+    public void opdaterOenske(int id, Ønske ø) {
+        String sql = "UPDATE oenske SET id=? navn = ?,beskrivelse=?,link=?,bruger_id=?WHERE id=?";
+        template.update(sql, ø.getId(), ø.getNavn(), ø.getBeskrivelse(), ø.getLink(), ø.getBruger_id());
     }
 
 

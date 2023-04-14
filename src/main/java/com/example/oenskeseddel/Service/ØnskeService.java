@@ -33,12 +33,12 @@ public class ØnskeService {
         return ønskeRepo.findeØnske(id);
     }
 
-    public Boolean deleteØnske(int id) {
-        return ønskeRepo.deleteØnske(id);
+    public Boolean sletOenske(int id) {
+        return ønskeRepo.sletOenske(id);
     }
 
-    public void opdaterØnske(int id, Ønske ø) {
-        ønskeRepo.opdaterØnske(id, ø);
+    public void opdaterOenske(int id, Ønske ø) {
+        ønskeRepo.opdaterOenske(id, ø);
     }
 /*
     public Bruger findBrugerById(int id){

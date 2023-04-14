@@ -65,7 +65,7 @@ public class HomeController {
     public String createNewØnske(@ModelAttribute Ønske ønske) {
         ønske.setBruger_id(bruger.getBruger_id());
         ønskeService.addØnske(ønske);
-        return "redirect:/createOenskeseddel";
+        return "redirect:/createOenskeseddel/" + bruger.getBruger_id();
     }
 
     // når oplysninger er indtastet
@@ -97,6 +97,26 @@ public class HomeController {
         } else {
             return "Home/loginError";
         }
+    }
+    @GetMapping("/sletOenske/{id}")
+    public String sletOenske(@PathVariable("id") int id){
+        boolean deleted = ønskeService.sletOenske(id);
+        if(deleted){
+            return "Home/createOenskeseddel";
+        } else{
+            return "redirect:/Home/loginError";
+        }
+    }
+    @GetMapping("opdaterOenske/{id}")
+    public String opdaterOenske(@PathVariable("id")int id, Model model){
+        model.addAttribute("oenske", ønskeService.findeØnske(id));
+        return "Home/redigerOenske";
+    }
+
+    @PostMapping("opdaterOenske/")
+    public String opdaterOenske(@ModelAttribute Ønske ønske){
+        ønskeService.opdaterOenske(ønske.getId(), ønske);
+        return "redirect:/Home/createOenskeseddel/";
     }
 }
 
