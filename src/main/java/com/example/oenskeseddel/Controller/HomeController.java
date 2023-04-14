@@ -23,6 +23,8 @@ public class HomeController {
     private LoginService loginService;
     private ØnskeService ønskeService;
 
+    private Bruger bruger;
+
     public HomeController(BrugerService brugerService, LoginService loginService, ØnskeService ønskeService) {
         this.brugerService = brugerService;
         this.loginService = loginService;
@@ -61,8 +63,9 @@ public class HomeController {
 
     @PostMapping("/createNewOenske")
     public String createNewØnske(@ModelAttribute Ønske ønske) {
+        ønske.setBruger_id(bruger.getBruger_id());
         ønskeService.addØnske(ønske);
-        return "Home/createOenskeseddel";
+        return "redirect:/createOenskeseddel";
     }
 
     // når oplysninger er indtastet
@@ -88,17 +91,12 @@ public class HomeController {
     @PostMapping("/brugerLogin")
     public String brugerLogin(@ModelAttribute Login login) {
         String brugernavn = login.getBrugernavn();
-        Bruger bruger = brugerService.findBrugernavn(brugernavn);
+        bruger = brugerService.findBrugernavn(brugernavn);
         if (bruger != null) {
             return "redirect:/createOenskeseddel/" + bruger.getBruger_id();
         } else {
             return "Home/loginError";
         }
-    }
-
-    @GetMapping("/")
-    public String addØnske() {
-        return "";
     }
 }
 

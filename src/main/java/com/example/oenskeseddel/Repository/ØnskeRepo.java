@@ -27,8 +27,11 @@ public class ØnskeRepo {
     }
 
     public void addØnske(Ønske ø) {
+        System.out.println("test3");
         String sql = "INSERT INTO oenske(navn, beskrivelse,link, bruger_id)VALUES (?,?,?,?)";
+        System.out.println("test4");
         template.update(sql, ø.getNavn(), ø.getBeskrivelse(), ø.getLink(), ø.getBruger_id());
+        System.out.println("test12");
     }
 
     public Ønske findeØnske(int id) {
