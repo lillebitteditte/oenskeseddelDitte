@@ -21,7 +21,7 @@ public class ØnskeRepo {
     }
 
     public void addØnske(Ønske Ø) {
-        String sql = "INSERT INTO oenske(navn,beskrivelse,linke,bruger_id)VALUES (?,?,?,?)";
+        String sql = "INSERT INTO oenske(navn,beskrivelse,link,bruger_id)VALUES (?,?,?,?)";
         template.update(sql, Ø.getNavn(), Ø.getBeskrivelse(), Ø.getLink(), Ø.getBruger_id());
 
     }
