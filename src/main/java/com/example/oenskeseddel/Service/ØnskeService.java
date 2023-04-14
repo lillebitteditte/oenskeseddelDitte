@@ -9,30 +9,27 @@ import java.util.List;
 
 
 @Service
-public class ØnskeService
-{
+public class ØnskeService {
     @Autowired
     ØnskeRepo ønskeRepo;
 
-    public List<Ønske> fetchAll()
-    {
+    public List<Ønske> fetchAll() {
         return ønskeRepo.fetchAll();
     }
 
-    public void addØnske(Ønske ø)
-    {
+    public void addØnske(Ønske ø) {
         ønskeRepo.addØnske(ø);
     }
-    public Ønske findeØnske(int id)
-    {
-      return ønskeRepo.findeØnske(id);
+
+    public Ønske findeØnske(int id) {
+        return ønskeRepo.findeØnske(id);
     }
-    public Boolean deleteØnske(int id)
-    {
+
+    public Boolean deleteØnske(int id) {
         return ønskeRepo.deleteØnske(id);
     }
 
-    public void opdaterØnske(int id, Ønske ø){
+    public void opdaterØnske(int id, Ønske ø) {
         ønskeRepo.opdaterØnske(id, ø);
     }
 

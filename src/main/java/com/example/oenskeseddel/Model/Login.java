@@ -6,6 +6,7 @@ public class Login {
     public Login(String brugernavn) {
         this.brugernavn = brugernavn;
     }
+
     public Login() {
 
     }

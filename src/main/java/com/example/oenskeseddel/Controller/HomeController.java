@@ -6,6 +6,8 @@ import com.example.oenskeseddel.Model.Ønske;
 import com.example.oenskeseddel.Service.BrugerService;
 import com.example.oenskeseddel.Service.LoginService;
 import com.example.oenskeseddel.Service.ØnskeService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,13 +18,17 @@ import java.util.List;
 
 @Controller
 public class HomeController {
+
+    @Autowired
+    JdbcTemplate jdbcTemplate;
     private BrugerService brugerService;
     private LoginService loginService;
     private ØnskeService ønskeService;
-    public HomeController(BrugerService brugerService, LoginService loginService,ØnskeService ønskeService) {
+
+    public HomeController(BrugerService brugerService, LoginService loginService, ØnskeService ønskeService) {
         this.brugerService = brugerService;
-        this.loginService=loginService;
-        this.ønskeService=ønskeService;
+        this.loginService = loginService;
+        this.ønskeService = ønskeService;
     }
 
 
@@ -37,20 +43,20 @@ public class HomeController {
     public String createBruger() {
         return "Home/createBruger";
     }
+
+
     @GetMapping("/createOenskeseddel")
     public String index(Model model) {
-        List<Ønske>ønskeList= ønskeService.fetchAll();
-        model.addAttribute("oensker",ønskeList);
-        return "redirect:Home/createOenskeseddel";
+        List<Ønske> ønskeList = ønskeService.fetchAll();
+        model.addAttribute("oensker", ønskeList);
+        return "createOenskeseddel";
     }
 
     @PostMapping("/createNewOenske")
-    public String createNewØnske(@ModelAttribute Ønske ønske){
-    ønskeService.addØnske(ønske);
-    return "redirect:Home/createOenskeseddel";
+    public String createNewØnske(@ModelAttribute Ønske ønske) {
+        ønskeService.addØnske(ønske);
+        return "createOenskeseddel";
     }
-
-
 
     // når oplysninger er indtastet
     @PostMapping("/createNewBruger")
@@ -67,8 +73,9 @@ public class HomeController {
 
     @GetMapping("/loginError")
     public String LoginError() {
-      return "Home/loginError";
+        return "Home/loginError";
     }
+
     @PostMapping("/brugerLogin")
     public String brugerLogin(@ModelAttribute Login login) {
         String brugernavn = login.getBrugernavn();
@@ -79,7 +86,5 @@ public class HomeController {
             return "Home/loginError";
         }
     }
-
-
 }
 

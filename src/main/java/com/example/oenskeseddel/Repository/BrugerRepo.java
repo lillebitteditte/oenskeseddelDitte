@@ -24,8 +24,8 @@ public class BrugerRepo {
     public void addBruger(Bruger A) {
         String sql = "INSERT INTO bruger (fornavn, efternavn, brugernavn, bruger_email)" +
                 "VALUES(?, ?, ?, ?)";
-        template.update(sql, A.getFornavn(),A.getEfternavn(),
-                A.getBrugernavn(),A.getBruger_email());
+        template.update(sql, A.getFornavn(), A.getEfternavn(),
+                A.getBrugernavn(), A.getBruger_email());
 
     }
 
@@ -33,11 +33,11 @@ public class BrugerRepo {
         String sql = "SELECT* FROM bruger WHERE brugernavn =?";
         RowMapper<Bruger> rowMapper = new BeanPropertyRowMapper<>(Bruger.class);
         List<Bruger> bruger = template.query(sql, rowMapper, brugernavn);
-       if (bruger.size()==1){
-           return bruger.get(0);
-       } else {
-           return null;
-       }
+        if (bruger.size() == 1) {
+            return bruger.get(0);
+        } else {
+            return null;
+        }
 
     }
 
