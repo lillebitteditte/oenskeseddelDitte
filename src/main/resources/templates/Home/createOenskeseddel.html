@@ -32,9 +32,9 @@
     </thead>
     <tbody>
     <tr th:each="oenske:${oensker}">
-        <td th:text="${oenske.navn}">
-        <td th:text="${oenske.beskrivelse}"/>
-        <td th:text="${oenske.link}"/>
+        <td th:text="${oenske.navn}"></td>
+        <td th:text="${oenske.beskrivelse}"></td>
+        <td th:text="${oenske.link}"></td>
 
         <td>
             <a th:href="@{'/sletØnske/'+${ønske.id}}">
