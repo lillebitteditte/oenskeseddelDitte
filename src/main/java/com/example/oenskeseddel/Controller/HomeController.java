@@ -102,7 +102,7 @@ public class HomeController {
     public String sletOenske(@PathVariable("id") int id){
         boolean deleted = ønskeService.sletOenske(id);
         if(deleted){
-            return "Home/createOenskeseddel";
+            return "redirect:/createOenskeseddel/" + bruger.getBruger_id();
         } else{
             return "redirect:/Home/loginError";
         }
@@ -116,7 +116,7 @@ public class HomeController {
     @PostMapping("opdaterOenske/")
     public String opdaterOenske(@ModelAttribute Ønske ønske){
         ønskeService.opdaterOenske(ønske.getId(), ønske);
-        return "redirect:/Home/createOenskeseddel/";
+        return "redirect:/createOenskeseddel/" + bruger.getBruger_id();
     }
 }
 
