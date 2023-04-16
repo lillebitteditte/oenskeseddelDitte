@@ -34,6 +34,7 @@ public class Ønske {
     public int getBruger_id() {
         return bruger_id;
     }
+
     public int getId() {
         return id;
     }
@@ -41,6 +42,7 @@ public class Ønske {
     public void setId(int id) {
         this.id = id;
     }
+
     public void setBeskrivelse(String beskrivelse) {
         this.beskrivelse = beskrivelse;
     }
@@ -56,5 +58,4 @@ public class Ønske {
     public void setBruger_id(int bruger_id) {
         this.bruger_id = bruger_id;
     }
-
 }
