@@ -39,13 +39,7 @@ public class ØnskeService {
     public void opdaterOenske(int id, Ønske ø) {
         ønskeRepo.opdaterOenske(id, ø);
     }
-/*
-    public Bruger findBrugerById(int id){
-        return ønskeRepo.findbrugerById(id);
-    }
 
-
- */
     public List<Ønske> findØnskerByBrugerId(int brugerId) {
         List<Ønske> alleØnsker = ønskeRepo.fetchAll();
         return alleØnsker.stream()
