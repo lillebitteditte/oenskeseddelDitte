@@ -10,21 +10,21 @@
     <h1>Din ønskeseddel</h1>
 </div>
 
-<div id="indtastContainer">
+<div class="indtastContainer">
     <form action="/createNewOenske" method="post">
-            <label>
-                <input placeholder="Hvad ønsker du dig?" type="text" name="navn" style="color: #6c440e">
-            </label>
+        <label label hidden="hidden" for="ønskeNavn">Navn</label>
+        <input placeholder="Hvad ønsker du dig?" type="text" name="navn" style="color: #6c440e">
+
         <br>
-            <label>
-                <input placeholder="Beskrivelse (farve, str, etc)" type="text" name="beskrivelse"
-                       style="color: #6c440e">
-            </label>
+        <label hidden="hidden" for="ønskeBeskrivelse">Beskrivelse</label>
+        <input placeholder="Beskrivelse (farve, str, etc)" type="text" name="beskrivelse"
+               style="color: #6c440e">
+
         <br>
 
-            <label>
-                <input placeholder="Link (valgfrit)" type="text" name="link" style="color: #6c440e">
-            </label>
+        <label hidden="hidden" for="ønskeLink">Link></label>
+        <input placeholder="Link (valgfrit)" type="text" name="link" style="color: #6c440e">
+
 
         <br>
 
@@ -34,41 +34,41 @@
         <br>
     </form>
 </div>
+<div class="tabelContainer">
+    <table>
+        <thead>
+        <tr>
+            <div id="ønskeNavn">
+                <th>Ønske</th>
+            </div>
+            <div id="ønskeBeskrivelse">
+                <th>Beskrivelse</th>
+            </div>
+            <div id="ønskeLink">
+                <th>Link</th>
+            </div>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="wish:${oenske}">
+            <td th:text="${wish.getNavn()}"></td>
+            <td th:text="${wish.getBeskrivelse()}"></td>
+            <td th:text="${wish.getLink()}"></td>
 
-<table>
-    <thead>
-    <tr>
-        <div id="ønskeNavn">
-            <th>Ønske</th>
-        </div>
-        <div id="ønskeBeskrivelse">
-            <th>Beskrivelse</th>
-        </div>
-        <div id="ønskeLink">
-            <th>Link</th>
-        </div>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="wish:${oenske}">
-        <td th:text="${wish.getNavn()}"></td>
-        <td th:text="${wish.getBeskrivelse()}"></td>
-        <td th:text="${wish.getLink()}"></td>
+            <td><a th:href="@{'/sletOenske/' + ${wish.id}}">
+                <button class="btn-sletOenske" id="btn-sletOenske">Slet ønske</button>
+            </a></td>
 
-        <td><a th:href="@{'/sletOenske/' + ${wish.id}}">
-            <button class="btn-sletOenske" id="btn-sletOenske">Slet ønske</button>
-        </a></td>
-
-        <td><a th:href="@{'/opdaterOenske/' + ${wish.id}}">
-            <button class="btn-opdaterOenske" id="btn-opdaterOenske">Rediger ønske</button>
-        </a></td>
-    </tr>
+            <td><a th:href="@{'/opdaterOenske/' + ${wish.id}}">
+                <button class="btn-opdaterOenske" id="btn-opdaterOenske">Rediger ønske</button>
+            </a></td>
+        </tr>
 
 
-    </tbody>
+        </tbody>
 
-</table>
-
+    </table>
+</div>
 
 </body>
 </html>

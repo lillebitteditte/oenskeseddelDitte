@@ -72,7 +72,7 @@ public class HomeController {
     public String index(Model model) {
         List<Ønske> ønskeList = ønskeService.fetchAll();
         model.addAttribute("oenske", ønskeList);
-        return "Home/createOenskeseddel";
+        return "Home/createOenskeseddel" + bruger.getBruger_id();
     }
 
     // metode til at vise brugerens (den bestemte bruger der er login) ønskeseddel

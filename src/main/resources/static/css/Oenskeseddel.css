@@ -19,6 +19,51 @@ h1{
     text-align: center;
 }
 
+.tabelContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+button {
+    background-color: #ead9cd;
+    color: #6b341d;
+    font-size: 20px;
+    padding: 20px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+input {
+    font-family: Anton, monospace;
+    font-size: 17px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: #fcf0ec;
+}
+
+table > thead{
+    font-family: Anton, monospace;
+    font-size: 20px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: #fcf0ec;
+    margin-top: 20px;
+}
+
+table > tbody{
+    font-family: Anton, monospace;
+    font-size: 15px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: #fcf0ec;
+    margin-top: 20px;
+}
+
 form > input {
     margin-bottom: 20px;
 }
