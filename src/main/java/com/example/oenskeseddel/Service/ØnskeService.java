@@ -25,7 +25,6 @@ public class ØnskeService {
     }
 
     public void addØnske(Ønske ø) {
-        System.out.println("test2");
         ønskeRepo.addØnske(ø);
     }
 

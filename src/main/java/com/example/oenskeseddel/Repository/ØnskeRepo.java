@@ -27,11 +27,8 @@ public class ØnskeRepo {
     }
 
     public void addØnske(Ønske ø) {
-        System.out.println("test3");
         String sql = "INSERT INTO oenske(navn, beskrivelse,link, bruger_id)VALUES (?,?,?,?)";
-        System.out.println("test4");
         template.update(sql, ø.getNavn(), ø.getBeskrivelse(), ø.getLink(), ø.getBruger_id());
-        System.out.println("test12");
     }
 
     public Ønske findeØnske(int id) {
@@ -48,9 +45,7 @@ public class ØnskeRepo {
 
     // This method will update the ønske.
     public void opdaterOenske(int id, Ønske ø) {
-        String sql = "UPDATE oenske SET id=? navn = ?,beskrivelse=?,link=?,bruger_id=?WHERE id=?";
-        template.update(sql, ø.getId(), ø.getNavn(), ø.getBeskrivelse(), ø.getLink(), ø.getBruger_id());
+        String sql = "UPDATE oenske SET navn = ?,beskrivelse=?,link=? WHERE id=? AND bruger_id=?";
+        template.update(sql, ø.getNavn(), ø.getBeskrivelse(), ø.getLink(), ø.getId(), ø.getBruger_id());
     }
-
-
 }

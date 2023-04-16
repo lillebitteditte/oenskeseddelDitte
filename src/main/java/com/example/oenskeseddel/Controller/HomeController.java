@@ -109,13 +109,13 @@ public class HomeController {
         }
     }
 
-    @GetMapping("opdaterOenske/{id}")
+    @GetMapping("/opdaterOenske/{id}")
     public String opdaterOenske(@PathVariable("id") int id, Model model) {
         model.addAttribute("oenske", ønskeService.findeØnske(id));
         return "Home/redigerOenske";
     }
 
-    @PostMapping("opdaterOenske/")
+    @PostMapping("/opdaterOenske")
     public String opdaterOenske(@ModelAttribute Ønske ønske) {
         ønskeService.opdaterOenske(ønske.getId(), ønske);
         return "redirect:/createOenskeseddel/" + bruger.getBruger_id();

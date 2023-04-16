@@ -47,11 +47,11 @@
         <td th:text="${wish.getLink()}"></td>
         <td th:text="${wish.getBruger_id()}"></td>
 
-        <td><a th:href="@{'/sletOenske/' + ${wish.getId()}}">
+        <td><a th:href="@{'/sletOenske/' + ${wish.id}}">
             <button class="btn-sletOenske" id="btn-sletOenske">Slet ønske</button>
         </a></td>
 
-        <td><a th:href="@{'/opdaterOenske/' + ${wish.getId()}}">
+        <td><a th:href="@{'/opdaterOenske/' + ${wish.id}}">
             <button class="btn-opdaterOenske" id="btn-opdaterOenske">Rediger ønske</button>
         </a></td>
     </tr>
