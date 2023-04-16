@@ -1,0 +1,116 @@
+body {
+    background-color: #FFF0EA;
+}
+
+h1{
+    position: relative;
+    text-align: center;
+    font-family: Anton, monospace;
+    margin: 10px;
+    font-size: 50px;
+    color: #6c440e
+}
+
+.indtastContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+form > input {
+    margin-bottom: 20px;
+}
+
+
+
+
+/* Hvad ønsker du dig? */
+
+ønskeNavn {
+    position: absolute;
+    width: 143px;
+    height: 18px;
+
+    font-family: 'Asap';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+
+    color: #472804;
+}
+
+/* Beskrivelse (fx farve, str, etc) */
+
+ønskeBeskrivelse {
+    position: absolute;
+    width: 199px;
+    height: 18px;
+
+    font-family: 'Asap';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+
+    color: #472804;
+}
+
+/* Link (valgfrit) */
+
+ønskeLink {
+    position: absolute;
+    width: 94px;
+    height: 18px;
+
+    font-family: 'Asap';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+
+    color: #472804;
+}
+
+
+rektangel1 {
+    align-items: center;
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 388px;
+    height: 45px;
+
+    background-color: #FFF9EF;
+    border: 1px solid #9B6525;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+rektangel2 {
+    align-items: center;
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 388px;
+    height: 45px;
+
+    background-color: #FFF9EF;
+    border: 1px solid #9B6525;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+rektangel3 {
+    align-items: center;
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 388px;
+    height: 45px;
+
+    background-color: #FFF9EF;
+    border: 1px solid #9B6525;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}

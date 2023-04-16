@@ -1,43 +1,52 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <link rel="stylesheet" type="text/css" th:href="@{/css/createØnskeseddel.css}">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/css/Oenskeseddel.css"/>
 </head>
 <body>
 
-<form action="/createNewOenske" method="post">
-    <div id="rektangel1">
-        <label>
-            <input placeholder="Hvad ønsker du dig?" type="text" name="navn" style="color: #6c440e">
-        </label>
-    </div>
+<div id="h1">
+    <h1>Din ønskeseddel</h1>
+</div>
 
-    <div id="rektangel2">
-        <label>
-            <input placeholder="Beskrivelse (farve, str, etc)" type="text" name="beskrivelse" style="color: #6c440e">
-        </label>
-    </div>
+<div id="indtastContainer">
+    <form action="/createNewOenske" method="post">
+            <label>
+                <input placeholder="Hvad ønsker du dig?" type="text" name="navn" style="color: #6c440e">
+            </label>
+        <br>
+            <label>
+                <input placeholder="Beskrivelse (farve, str, etc)" type="text" name="beskrivelse"
+                       style="color: #6c440e">
+            </label>
+        <br>
 
-    <br>
-    <div id="rektangel3">
-        <label>
-            <input placeholder="Link (valgfrit)" type="text" name="link" style="color: #6c440e">
-        </label>
-    </div>
+            <label>
+                <input placeholder="Link (valgfrit)" type="text" name="link" style="color: #6c440e">
+            </label>
 
-    <br>
+        <br>
 
-    <a href="/createOenskeseddel">
-        <button type="submit" class="btn-create, btn" id="btn-create">Tilføj ønske</button>
-    </a>
-    <br>
-</form>
+        <a href="/createOenskeseddel">
+            <button type="submit" class="btn-create, btn" id="btn-create">Tilføj ønske</button>
+        </a>
+        <br>
+    </form>
+</div>
+
 <table>
     <thead>
     <tr>
-        <th>Ønske</th>
-        <th>Beskrivelse</th>
-        <th>Link</th>
+        <div id="ønskeNavn">
+            <th>Ønske</th>
+        </div>
+        <div id="ønskeBeskrivelse">
+            <th>Beskrivelse</th>
+        </div>
+        <div id="ønskeLink">
+            <th>Link</th>
+        </div>
     </tr>
     </thead>
     <tbody>
