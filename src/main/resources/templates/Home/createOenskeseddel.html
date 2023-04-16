@@ -45,7 +45,6 @@
         <td th:text="${wish.getNavn()}"></td>
         <td th:text="${wish.getBeskrivelse()}"></td>
         <td th:text="${wish.getLink()}"></td>
-        <td th:text="${wish.getBruger_id()}"></td>
 
         <td><a th:href="@{'/sletOenske/' + ${wish.id}}">
             <button class="btn-sletOenske" id="btn-sletOenske">Slet ønske</button>

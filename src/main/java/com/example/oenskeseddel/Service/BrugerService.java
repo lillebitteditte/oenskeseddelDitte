@@ -13,19 +13,11 @@ public class BrugerService {
     @Autowired
     BrugerRepo brugerRepo;
 
-    public List<Bruger> fetchAll() {
-        return brugerRepo.fetchAll();
-    }
-
     public void addBruger(Bruger B) {
         brugerRepo.addBruger(B);
     }
 
     public Bruger findBrugernavn(String brugernavn) {
         return brugerRepo.findeBrugernavn(brugernavn);
-    }
-
-    public void deleteBruger(int id) {
-        brugerRepo.deleteBruger(id);
     }
 }
