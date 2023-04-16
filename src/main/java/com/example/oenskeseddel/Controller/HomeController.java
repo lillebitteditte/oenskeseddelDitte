@@ -98,23 +98,25 @@ public class HomeController {
             return "Home/loginError";
         }
     }
+
     @GetMapping("/sletOenske/{id}")
-    public String sletOenske(@PathVariable("id") int id){
+    public String sletOenske(@PathVariable("id") int id) {
         boolean deleted = ønskeService.sletOenske(id);
-        if(deleted){
+        if (deleted) {
             return "redirect:/createOenskeseddel/" + bruger.getBruger_id();
-        } else{
+        } else {
             return "redirect:/Home/loginError";
         }
     }
+
     @GetMapping("opdaterOenske/{id}")
-    public String opdaterOenske(@PathVariable("id")int id, Model model){
+    public String opdaterOenske(@PathVariable("id") int id, Model model) {
         model.addAttribute("oenske", ønskeService.findeØnske(id));
         return "Home/redigerOenske";
     }
 
     @PostMapping("opdaterOenske/")
-    public String opdaterOenske(@ModelAttribute Ønske ønske){
+    public String opdaterOenske(@ModelAttribute Ønske ønske) {
         ønskeService.opdaterOenske(ønske.getId(), ønske);
         return "redirect:/createOenskeseddel/" + bruger.getBruger_id();
     }
