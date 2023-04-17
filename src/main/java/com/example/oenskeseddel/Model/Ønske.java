@@ -1,8 +1,8 @@
 package com.example.oenskeseddel.Model;
 
 public class Ønske {
-
     private int id;
+
     private String navn;
     private String beskrivelse;
     private String link;
@@ -12,17 +12,23 @@ public class Ønske {
 
     }
 
-    public Ønske(String navn, String beskrivelse, String link, int bruger_id) {
+    public Ønske(int id,String navn, String beskrivelse, String link, int bruger_id) {
+        this.id=id;
         this.navn = navn;
         this.beskrivelse = beskrivelse;
         this.link = link;
         this.bruger_id = bruger_id;
     }
+    public int getId() {
+        return id;
+    }
 
     public String getNavn() {
         return navn;
     }
-
+  public void setId(int id) {
+      this.id=id;
+  }
     public void setNavn(String navn) {
         this.navn = navn;
     }
@@ -35,13 +41,9 @@ public class Ønske {
         return bruger_id;
     }
 
-    public int getId() {
-        return id;
-    }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+
+
 
     public void setBeskrivelse(String beskrivelse) {
         this.beskrivelse = beskrivelse;
