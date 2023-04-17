@@ -26,30 +26,33 @@ h1 {
 }
 
 form {
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 form > input {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
-/* knap: login */
+/* log ind knap */
 button {
     background-color: #D7EFFC;
+    font-family: Anton, monospace;
     color: #000000;
     font-size: 32px;
     padding: 40px 60px;
     border: none;
-    border-radius: 20px;
-    cursor: pointer;
+    border-radius: 40px;
+    border-width: 0px 3px 3px 0px;
+    border-color: rgba(255, 0, 184, 0.8);
 }
 
-/* tekstbokse med brugerinfo  */
+/* tekstboks med brugerinfo  */
 
 input {
     font-family: Anton, monospace;
     font-size: 25px;
     padding: 20px 30px;
-    border-radius: 20px;
+    border-radius: 30px;
+    border-color: #FF00B8;
     background-color: #FFFFFF;
 }
