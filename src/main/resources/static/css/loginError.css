@@ -2,6 +2,20 @@ body {
     background-color: #E0F9FF;
 }
 
+h1{
+    font-family: Anton, monospace;
+    text-align: center;
+
+}
+
+.knapContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
 #btn-tilbage {
     background-color: #D7EFFC;
     font-family: Anton, monospace;
