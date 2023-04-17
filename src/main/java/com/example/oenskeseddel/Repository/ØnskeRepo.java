@@ -45,7 +45,7 @@ public class ØnskeRepo {
 
     // This method will update the ønske.
     public void opdaterOenske(int id, Ønske ø) {
-        String sql = "UPDATE oenske SET navn = ?, beskrivelse = ?, link = ?, bruger_id = ? WHERE id = ?";
-        template.update(sql, ø.getNavn(), ø.getBeskrivelse(), ø.getLink(), ø.getBruger_id(), ø.getId());
+        String sql = "UPDATE oenske SET navn = ?, beskrivelse = ?, link = ? WHERE id = ?";
+        template.update(sql, ø.getNavn(), ø.getBeskrivelse(), ø.getLink(), ø.getId());
     }
 }
