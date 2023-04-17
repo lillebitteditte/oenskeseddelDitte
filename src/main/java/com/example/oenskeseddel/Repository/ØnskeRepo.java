@@ -14,6 +14,8 @@ public class ØnskeRepo {
     @Autowired
     JdbcTemplate template;
 
+
+    // This method will select the whole data from the database.
     public List<Ønske> fetchAll() {
         String sql = "SELECT * FROM oenske";
         RowMapper<Ønske> rowMapper = new BeanPropertyRowMapper<>(Ønske.class);
@@ -25,11 +27,12 @@ public class ØnskeRepo {
         RowMapper<Ønske> rowMapper = new BeanPropertyRowMapper<>(Ønske.class);
         return template.query(sql, rowMapper, id);
     }
-
+    // The add method, will add the new info to the data.
     public void addØnske(Ønske ø) {
         String sql = "INSERT INTO oenske(navn, beskrivelse, link, bruger_id) VALUES(?,?,?,?)";
         template.update(sql, ø.getNavn(), ø.getBeskrivelse(), ø.getLink(), ø.getBruger_id());
     }
+      // This method will finde the ønske.
 
     public Ønske findeØnske(int id) {
         String sql = "SELECT * FROM oenske WHERE id = ?";
@@ -37,7 +40,7 @@ public class ØnskeRepo {
         Ønske ønske = template.queryForObject(sql, rowMapper, id);
         return ønske;
     }
-
+  // This method will delete the ønske.
     public Boolean sletOenske(int id) {
         String sql = "DELETE FROM oenske WHERE id = ?";
         return template.update(sql, id) > 0;
