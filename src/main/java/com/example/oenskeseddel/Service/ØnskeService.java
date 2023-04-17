@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 public class ØnskeService {
     @Autowired
     ØnskeRepo ønskeRepo;
-    BrugerRepo brugerRepo;
+
 
     public List<Ønske> fetchAll() {
         return ønskeRepo.fetchAll();
@@ -23,15 +23,15 @@ public class ØnskeService {
     public List<Ønske> fetchUserWishes(int userId) {
         return ønskeRepo.fetchUserWishes(userId);
     }
-
+     // add method in the service.
     public void addØnske(Ønske ø) {
         ønskeRepo.addØnske(ø);
     }
-
+   // This method will finde the ønske.
     public Ønske findeØnske(int id) {
         return ønskeRepo.findeØnske(id);
     }
-
+    // The delete method.
     public Boolean sletOenske(int id) {
         return ønskeRepo.sletOenske(id);
     }
