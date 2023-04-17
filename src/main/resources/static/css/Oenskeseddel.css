@@ -12,6 +12,9 @@ h1{
 }
 
 .indtastContainer {
+    top: 150px;
+    left: 100px;
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -22,6 +25,8 @@ h1{
 }
 
 .tabelContainer {
+    position: absolute;
+    right: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
