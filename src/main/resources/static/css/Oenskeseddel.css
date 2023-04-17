@@ -1,5 +1,5 @@
 body {
-    background-color: #FFF0EA;
+    background-color: #E0F9FF;
 }
 
 h1{
@@ -8,25 +8,18 @@ h1{
     font-family: Anton, monospace;
     margin: 10px;
     font-size: 50px;
-    color: #6c440e
+    color: #FF00B8
 }
 
 .indtastContainer {
-    top: 150px;
-    left: 100px;
-    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-bottom: 100px;
-
 }
 
 .tabelContainer {
-    position: absolute;
-    right: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -35,12 +28,14 @@ h1{
 }
 
 button {
-    background-color: #ead9cd;
-    color: #6b341d;
+    background-color: #D7EFFC;
+    color: #000000;
     font-size: 20px;
     padding: 20px 30px;
-    border: none;
+    border-style: solid;
     border-radius: 10px;
+    border-width: 0px 1px 1px 0px;
+    border-color: rgba(255, 255, 255, 0.8);
     cursor: pointer;
     margin-left: 10px;
 }
@@ -48,18 +43,17 @@ button {
 input {
     font-family: Anton, monospace;
     font-size: 17px;
-    padding: 15px 20px;
+    padding: 10px 15px;
     border-radius: 10px;
-    background-color: #fcf0ec;
+    background-color: #FFFFFF;
 }
-
 
 table > thead{
     font-family: Anton, monospace;
     font-size: 20px;
     padding: 10px 15px;
     border-radius: 10px;
-    background-color: #fcf0ec;
+    background-color: #E0F9FF;
     margin-top: 20px;
 }
 
@@ -68,12 +62,13 @@ table > tbody{
     font-size: 15px;
     padding: 10px 15px;
     border-radius: 10px;
-    background-color: #fcf0ec;
+    background-color: #E0F9FF;
     margin-top: 20px;
 }
 
 form > input {
     margin-bottom: 20px;
+
 }
 
 
@@ -111,59 +106,7 @@ form > input {
     color: #472804;
 }
 
-/* Link (valgfrit) */
-
-ønskeLink {
-    position: absolute;
-    width: 94px;
-    height: 18px;
-
-    font-family: 'Asap';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 18px;
-
-    color: #472804;
-}
 
 
-rektangel1 {
-    align-items: center;
-    box-sizing: border-box;
-
-    position: absolute;
-    width: 388px;
-    height: 45px;
-
-    background-color: #FFF9EF;
-    border: 1px solid #9B6525;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-rektangel2 {
-    align-items: center;
-    box-sizing: border-box;
-
-    position: absolute;
-    width: 388px;
-    height: 45px;
-
-    background-color: #FFF9EF;
-    border: 1px solid #9B6525;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
 
 
-rektangel3 {
-    align-items: center;
-    box-sizing: border-box;
-
-    position: absolute;
-    width: 388px;
-    height: 45px;
-
-    background-color: #FFF9EF;
-    border: 1px solid #9B6525;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}

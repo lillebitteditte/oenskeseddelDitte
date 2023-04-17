@@ -1,9 +1,9 @@
 body {
-    background-color: #FFF0EA;
+    background-color: #E0F9FF;
 }
 
 header {
-    background-color: #f5eeeb;
+    background-color: #FF00B8;
     padding: 20px;
 }
 
@@ -22,7 +22,7 @@ h1 {
     font-family: Anton, monospace;
     margin: 10px;
     font-size: 40px;
-    color: #6c440e;
+    color: #FF00B8;
 }
 
 form {
@@ -35,13 +35,14 @@ form > input {
 
 /* knap: opret bruger */
 button {
-    background-color: #ead9cd;
-    color: #6b341d;
+    background-color: #D7EFFC;
+    color: #000000;
     font-size: 32px;
     padding: 40px 60px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
+    border-style: solid;
+    border-width: 0px 2px 1px 0px;
+    border-radius: 50px;
+    border-color: rgba(255, 255, 255, 0.8);
 }
 
 /* tekstbokse med brugerinfo  */
@@ -49,6 +50,8 @@ input {
     font-family: Anton, monospace;
     font-size: 25px;
     padding: 20px 30px;
-    border-radius: 10px;
-    background-color: #fcf0ec;
+    border-radius: 20px;
+    border-width: 1px 1px 1px 1px;
+    border-color: #FF00B8;
+    background-color:        #FFFFFF;
 }
