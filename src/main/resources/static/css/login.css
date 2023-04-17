@@ -1,9 +1,9 @@
 body {
-    background-color: #FFF0EA;
+    background-color: #E0F9FF;
 }
 
 header {
-    background-color: #f5eeeb;
+    background-color: #E0F9FF;
     padding: 20px;
 }
 
@@ -22,7 +22,7 @@ h1 {
     font-family: Anton, monospace;
     margin: 10px;
     font-size: 40px;
-    color: #6c440e;
+    color: #FF00B8;
 }
 
 form {
@@ -35,12 +35,12 @@ form > input {
 
 /* knap: login */
 button {
-    background-color: #ead9cd;
-    color: #6b341d;
+    background-color: #D7EFFC;
+    color: #000000;
     font-size: 32px;
     padding: 40px 60px;
     border: none;
-    border-radius: 10px;
+    border-radius: 20px;
     cursor: pointer;
 }
 
@@ -50,6 +50,6 @@ input {
     font-family: Anton, monospace;
     font-size: 25px;
     padding: 20px 30px;
-    border-radius: 10px;
-    background-color: #fcf0ec;
+    border-radius: 20px;
+    background-color: #FFFFFF;
 }
