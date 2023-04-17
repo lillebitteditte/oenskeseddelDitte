@@ -15,6 +15,7 @@ h1 {
     margin: 10px;
     font-size: 75px;
     color: #FF00B8;
+    z-index: 2;
 }
 
 /* Ønsker*/
@@ -26,6 +27,7 @@ h2 {
     margin: 0px;
     font-size: 75px;
     color: #FF00B8;
+    z-index: 2;
 }
 
 /* Samlet */
@@ -36,6 +38,7 @@ h3 {
     margin: 0px;
     font-size: 75px;
     color: #FF00B8;
+    z-index: 2;
 }
 
 button {
@@ -50,6 +53,7 @@ button {
     border-width: 0px 1px 1px 0px;
     border-style: solid;
     border-color: rgba(255, 0, 184, 0.8);
+    z-index: 2;
 }
 
 button:hover {
@@ -58,11 +62,13 @@ button:hover {
 
 .wrapper{
     box-sizing: border-box;
-
     position: absolute;
-    width: 1033px;
-    height: 486px;
-
+    top: 80px;
+    bottom: 500px;
+    left: 80px;
+    width: 1350px;
+    height: 500px;
     background: #E0F9FF;
     border: 3px dashed #FFFFFF;
+    z-index: 1;
 }
