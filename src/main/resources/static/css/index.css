@@ -1,20 +1,24 @@
 body {
-    background-color: #FFF0EA;
+    background-color: #E0F9FF;
 }
 
 header {
-    background-color: #f5eeeb;
+    background-color: #E0F9FF;
     padding: 20px;
 }
 
+/* Alle dine */
 h1 {
     position: relative;
     font-family: Anton, monospace;
     left: 200px;
     margin: 10px;
     font-size: 75px;
-    color: #6c440e;
+    color: #FF00B8;
+    z-index: 2;
 }
+
+/* Ønsker*/
 
 h2 {
     position: relative;
@@ -22,32 +26,49 @@ h2 {
     left: 200px;
     margin: 0px;
     font-size: 75px;
-    color: #6c440e;
+    color: #FF00B8;
+    z-index: 2;
 }
 
+/* Samlet */
 h3 {
     position: relative;
     font-family: Anton, monospace;
     left: 200px;
     margin: 0px;
     font-size: 75px;
-    color: #6c440e;
+    color: #FF00B8;
+    z-index: 2;
 }
 
 button {
     position: relative;
     left: 900px;
-    bottom: 400px;
-    background-color: #ead9cd;
-    color: #6b341d;
+    bottom: 350px;
+    background-color: #D7EFFC;
+    color: #000000;
     font-size: 32px;
     padding: 40px 60px;
     border-radius: 50px;
-    border-width: 0px 2px 1px 0px;
-    border-style: dashed;
+    border-width: 0px 1px 1px 0px;
+    border-style: solid;
     border-color: rgba(255, 0, 184, 0.8);
+    z-index: 2;
 }
 
 button:hover {
-    background-color: #d9c4b9;
+    background-color: #FFFFFF;
+}
+
+.wrapper{
+    box-sizing: border-box;
+    position: absolute;
+    top: 80px;
+    bottom: 500px;
+    left: 80px;
+    width: 1350px;
+    height: 500px;
+    background: #E0F9FF;
+    border: 3px dashed #FFFFFF;
+    z-index: 1;
 }
