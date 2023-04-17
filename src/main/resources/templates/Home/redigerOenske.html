@@ -8,6 +8,7 @@
 <body>
 <h1>Rediger ønske</h1>
 
+<div class="redigerContainer">
 <form action="/opdaterOenske" method="post">
     <input type="text" name="id" th:value="${oenske.id}" style="display: none">
     <input type="text" name="navn" th:value="${oenske.navn}">
@@ -17,6 +18,6 @@
 
     <input type="submit" value="Gem"/>
 </form>
-
+</div>
 </body>
 </html>
